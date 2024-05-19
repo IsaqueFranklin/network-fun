@@ -4,14 +4,12 @@ package main
 
 import (
   "fmt"
-  "net"
-  "strconv"
-  "time"
+  "github.com/isaquefranklin/network-fun/port"
 )
 
 func main() {
   fmt.Println("Port Scanning")
-  open := scanPort("tcp", "localhost", 1313)
+  results := port.InitialScan("localhost") 
   //The ports within the 1-1024 range are typically locked down by default.
-  fmt.Printf("Port Open: %t\n", open)
+  fmt.Println(results)
 }

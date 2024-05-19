@@ -11,7 +11,7 @@ type ScanResult struct {
   State string
 }
 
-func ScanPort(protocol, hostname string, port int) bool {
+func ScanPort(protocol, hostname string, port int) ScanResult {
   result := ScanResult{Port: port}
 
   address := hostname + ":" + strconv.Itoa(port)
