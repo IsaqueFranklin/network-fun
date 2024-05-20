@@ -9,6 +9,7 @@ import (
 type ScanResult struct {
   Port int
   State string
+  service string
 }
 
 func ScanPort(protocol, hostname string, port int) ScanResult {
