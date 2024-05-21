@@ -41,3 +41,17 @@ func InitialScan(hostname string) []ScanResult {
 
   return results
 }
+
+func WideScan(hostname string) []ScanResult {
+  var results []ScanResult
+
+  for i := 0; i <= 49152; i++ {
+    results = append(results, ScanPort("udp", hostname, i))
+  }
+
+  for i := 0; i <= 49152; i++ {
+    results = append(results, ScanPort("tcp", hostname, i))
+  }
+
+  return results
+}

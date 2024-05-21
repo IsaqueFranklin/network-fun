@@ -1,0 +1,10 @@
+The example I did can sometimes tip off a security system that a potential hack is underway.
+
+When implementing a more sophisticated port scanning tool, you should note that there are a number of other techniques which can also be employed which each have their own benefits and drawbacks.
+
+Somo of the more common techniques are:
+- Ping Scan: This sends a ping and listens for a response.
+- TCP Half-Open: Also known as SYN scan, these scans attempt to start a TCP connection, listen for the SYN-ACK response and then never send the final ACK.
+- TCP Open: This is just attempting to open a TCP connection on a host:port like we have done above.
+- UDP: Very similar to TCP scanning except using the UDP protocol.
+- Stealth Scanning: A far more sophisticated type of scan which has been designed so that these scans don't show up in connection logs.

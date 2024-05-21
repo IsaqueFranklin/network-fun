@@ -12,4 +12,7 @@ func main() {
   results := port.InitialScan("localhost") 
   //The ports within the 1-1024 range are typically locked down by default.
   fmt.Println(results)
+
+  widescanresults := port.WideScan("localhost")
+  fmt.Println(widescanresults)
 }
